@@ -7,8 +7,8 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import { Pagination } from '@mui/material';
-import EditNoteOutlinedIcon from '@mui/icons-material/EditNoteOutlined';
 import DeleteForeverOutlinedIcon from '@mui/icons-material/DeleteForeverOutlined';
+import BasicModal from './BasicModal';
 function createData(name, calories, fat, carbs, protein) {
     return { name, calories, fat, carbs, protein };
 }
@@ -48,7 +48,7 @@ export default function ProductTable() {
                                 <TableCell align="right">{row.fat}</TableCell>
                                 <TableCell align="right">{row.carbs}</TableCell>
                                 <TableCell align="right">
-                                    <button className='text-green-950' ><EditNoteOutlinedIcon />  </button>
+                                    <BasicModal  />
                                     <button className='text-red-900'><DeleteForeverOutlinedIcon /></button>
                                 </TableCell>
                             </TableRow>
